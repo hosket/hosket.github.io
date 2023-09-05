@@ -1,0 +1,130 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Programming Language Hosket</title>
+
+    <meta name="description" content="A showcase of Simply Docs by MarketingPipeline built using Simple.CSS">
+
+    <link rel="stylesheet" href="./assets/style.css">
+
+    <link rel="icon" href="./assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="./assets/images/favicon.png">
+
+    <!-- Facebook integration -->
+    <meta property="og:title" content="The Programming Language Hosket">
+    <meta property="og:image" content="./assets/images/OG_image.png">
+    <meta property="og:url" content="https://marketingpipeline.github.io/Simply-Docs/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Simple.css">
+    <meta property="og:description" content="A Simply Docs / Blog Template built using Simple.css.">
+
+    <!-- Twitter integration -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Programming Language Hosket">
+    <meta name="twitter:image" content="./assets/images/OG_image.png">
+    <meta name="twitter:url" content="https://marketingpipeline.github.io/Simply-Docs/">
+    <meta name="twitter:description" content="A Simply Docs / Blog Template built using Simple.css">
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/prism.min.js"></script>
+
+</head>
+<header>
+    <br>
+    <img src="./assets/images/favicon.png" width="290px" height="290px" style="object-fit: contain;">
+    <p style="font-size: 20.5;"><b>Hosket</b> is a programming language that allows you to work quickly and integrate systems more efficiently
+    </p>
+    <nav>
+        <a href="./assets/downloads/Hosket 1.0.rar">Download</a>
+    </nav>
+</header>
+<main>
+    <h2>Welcome!</h2>
+    <p>Whether you are a beginner or an experienced developer, learning and using Hosket is very easy.<br>
+        You can download Hosket simply by clicking the button below:</p>
+    <a href="./assets/downloads/Hosket 1.0.rar"><button>Download
+            Hosket</button></a>
+    <p>Which will give you access to all the features of Hosket, such as:</p>
+    <h3>No parentheses to call the function</h3>
+    <p>Many emerging languages such as Python, Javascript, C++, .. all call functions that need brackets, but Hosket
+        follows the same direction as simple languages such as Batch, Bash, PowerShell, ..</p><br>
+<pre style="background-color: ghostwhite;">
+<code><span style="color: purple">print</span> <span style="color: green">"Hello, World!"</span></code></pre>
+    <h3>Table</h3>
+    <p>Table is like Dictionary but in addition Table can also be like a List! It's really simple, but the idea is taken from the Lua programming language.</p>
+    <pre style="background-color: ghostwhite;">
+<code><span style="color: darkblue">load</span> <span style="color: purple">table</span> <span style="color: grey"># Importing table module</span>
+a = {}
+k = <span style="color: green">"x"</span>
+<span style="color: purple">table</span>.<span style="color: purple">set</span> a, k, <span style="color: #1c91c7">10</span> <span style="color: grey"># new entry, with key = "x" and value = 10</span>
+<span style="color: purple">table</span>.<span style="color: purple">set</span> a, <span style="color: #1c91c7">20</span>, <span style="color: green">"hello"</span> <span style="color: grey"># new entry, with key = 20 and value = "hello"</span>
+<span style="color: purple">print</span> a[<span style="color: green">"x"</span>] <span style="color: grey"># 10</span>
+<span style="color: purple">print</span> a[<span style="color: #1c91c7">20</span>] <span style="color: grey"># "hello"</span>
+<span style="color: purple">print</span> a <span style="color: grey"># {'x' = 10, 20 = 'hello'}</span>
+</code></pre>
+    <h3>Cool control statements syntax</h3>
+    <p>Hosket, before thinking of the idea to build a programming language, sometimes had problems in simulating the idea, so I decided to add <code>$( )</code> to open and close code block.</p>
+    <pre style="background-color: ghostwhite;">
+<code>a = <span style="color: #1c91c7">5</span>
+<span style="color: darkblue">if</span> a == <span style="color: #1c91c7">5</span> $(
+    <span style="color: purple">print</span> <span style="color: green">"a is 5!"</span>
+) <span style="color: darkblue">else</span> $(
+    <span style="color: purple">print</span> <span style="color: green">"No way!"</span>
+)
+</code></pre>
+</code></pre>
+    <pre style="background-color: ghostwhite;">
+<code><span style="color: darkblue">loop</span> <span style="color: #1c91c7">10</span> $(
+    <span style="color: purple">print</span> <span style="color: green">"I get to print 10 times!"</span>
+)
+</code></pre>
+</code></pre>
+    <pre style="background-color: ghostwhite;">
+<code><span style="color: darkblue">loop</span> $(
+    <span style="color: purple">print</span> <span style="color: green">"FOREVER!1!1!!"</span>
+)
+</code></pre>
+    <h3>Function callback but something went wrong..</h3>
+    <p>Because the idea of building Hosket is to not have parentheses when calling the function, so after thinking about it for a while, I came up with the idea of adding<br>
+<code>|&lt;function&gt; &lt;arguments&gt;|</code></p>
+</code></pre>
+    <pre style="background-color: ghostwhite;">
+<code><span style="color: darkblue">func</span> <span style="color: purple">sum</span> a, b $(
+    <span style="color: darkblue">give</span> a + b
+)
+
+<span style="color: purple">print</span> |<span style="color: purple">sum</span> 3, 5| <span style="color: grey"># 8 also why? cuz yes B)</span>
+</code></pre>
+    <h3>Only few reserved keywords, data types</h3>
+    <p>Hosket is a programming language that is still in the process of developing additional features like today's emerging languages, but Hosket has a number of reserved keywords of only 8 and data types have exactly 4 types!</p>
+    <pre style="background-color: ghostwhite;">
+<code><span style="color: darkblue">if else loop skip stop func give load</span></code></pre>
+    <pre style="background-color: ghostwhite;">
+<code>a = <span style="color: green">"Hello, World!"</span> <span style="color: grey"># This is str type!</span>
+b = <span style="color: #1c91c7">123</span> <span style="color: grey"># This is num type!</span>
+c = <span style="color: #1c91c7">1</span>.<span style="color: #1c91c7">24</span> <span style="color: grey"># Also this is num type too!</span>
+d = {<span style="color: #1c91c7">1</span>, <span style="color: #1c91c7">2</span>, <span style="color: #1c91c7">3</span>} <span style="color: grey"># This is table type! Or you can call it an array</span>
+e = {<span style="color: #1c91c7">0</span> = <span style="color: green">"Hi"</span>, <span style="color: green">"abc"</span>: <span style="color: #1c91c7">456</span>, attr = <span style="color: purple">print</span>} <span style="color: grey"># This is "real" table type!</span>
+<span style="color: darkblue">func</span> f $() <span style="color: grey"># This is func type!</span></code></pre>
+    <p>But Hosket also has built-in types.</p>
+<pre style="background-color: ghostwhite;">
+<code>&lt;module&gt; &lt;object&gt; &lt;built-in function&gt;</code></pre>
+    <h3>and much more!</h3>
+    <p>Ready to get started? Here are some links to help you out: (COMING SOON!)</p>
+    <ul>
+        <li><a href="#">Hosket's <b>tutorial</b></a> will show you how to use and start writing a program in this programming language in a simple friendly way.</li>
+        <li><a href="#">Hosket's <b>documentation</b></a> is a rich catalog of information about all of Hosket's features whenever you see something you want more information about.</li>
+        <li><a href="#">Hosket's <b>download page</b></a> is intended for you to download and experience older or newer versions that are more suitable for you in your environment.</li>
+    </ul>
+</main>
+
+
+
+<footer>
+    <p>Simply Docs was created by <a href="https://github.com/MarketingPipeline/">Marketing Pipeline</a> and is licensed
+        under the MIT license.</p>
+    <small>© 2014 Some company name</small>
+    <address>email@email.com</address>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/gh/MarketingPipeline/Markdown-Tag/markdown-tag.js"></script>

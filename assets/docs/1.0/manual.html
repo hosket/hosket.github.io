@@ -1,0 +1,82 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hosket Documentation</title>
+
+    <meta name="description" content="A showcase of Simply Docs by MarketingPipeline built using Simple.CSS">
+
+    <link rel="stylesheet" href="../../assets/style.css">
+
+    <link rel="icon" href="../../assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="../../assets/images/favicon.png">
+
+    <!-- Facebook integration -->
+    <meta property="og:title" content="Hosket Documentation">
+    <meta property="og:image" content="../../assets/images/OG_image.png">
+    <meta property="og:url" content="https://marketingpipeline.github.io/Simply-Docs/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Simple.css">
+    <meta property="og:description"
+        content="Hosket's documentation is a rich catalog of information about all of Hosket's features whenever you see something you want more information about.">
+
+    <!-- Twitter integration -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hosket Documentation">
+    <meta name="twitter:image" content=".../../assets/images/OG_image.png">
+    <meta name="twitter:url" content="https://marketingpipeline.github.io/Simply-Docs/">
+    <meta name="twitter:description"
+        content="Hosket's documentation is a rich catalog of information about all of Hosket's features whenever you see something you want more information about.">
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/prism.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+</head>
+<div class="nav-down" id="div"
+    style="background-image: linear-gradient(120deg, #af672c, #f2542c); position: fixed; width: 100%; height: auto;">
+    <nav style="display: inline-block; position: relative; bottom: .4rem;">
+        <img src="../../assets/images/favicon.png" width="80px" height="45px" style="object-fit: cover; margin: 0 0 -.75rem 0;
+            position: relative; top: .2rem">
+        <span
+            style="font-size: 30px; margin: 0 1rem 0.5rem 0; color:whitesmoke; position: relative; top: .1rem;">Documentation</span>
+        <a href="./documentation.html#introduction" style="background-color: rgba(255, 255, 255, 0.08)">Introduction</a>
+        <a href="./documentation.html#contents" style="background-color: rgba(255, 255, 255, 0.08)">Table of Contents</a>
+        <a href="#" style="background-color: rgba(255, 255, 255, 0.08)">Basic Concepts</a>
+        <a href="/" style="background-color: rgba(255, 255, 255, 0.08)">The Language</a>
+        <a href="/" style="background-color: rgba(255, 255, 255, 0.08)">Standard Libraries</a>
+    </nav>
+</div>
+<script src="../../assets/script.js"></script>
+<main>
+    <br><br>
+    <h2>1 - Basic Concepts</h2>
+    <h3 id="1.1">1.1 - Values and Types</h3>
+    <p>Hosket is a dynamically typed language. This means that variables do not have types; Only value can do that. There is no type definition in the language. All values have their own type.</p>
+    <p>All values in Hosket are first class values. This means that all values can be stored in variables, transmitted as arguments to other functions and returned as results.</p>
+    <p>There are only 4 types in Hosket: <code>str</code>, <code>num</code>, <code>func</code> and <code>table</code>. Since Hosket has no boolean or none type, numbers are substituted for it instead, such as: <code>0</code> stands for false condition, <code>1</code> stands for true condition and <code>0</code> also stands for none type. Sometimes <code>str</code> can also become a boolean when the empty string represents a false condition and there are text or data in the string that represents a true condition. Both tables and built-in types can become conditions.</p>
+    <p>The type <code>num</code> represents both integers and real (floating point) numbers, using two subtypes: integers and floats. Standard Hosket uses 64-bit integers and double-precision (64-bit) floats.</p>
+    <p>The <code>str</code> type represents an invariant byte string. Clean 8-bit Hosket: The string can contain any 8-bit value, including the embedded zero (<code>'\0'</code>). Hosket has nothing to do with encoding either; it makes no assumptions about the content of a string. The length of any string in Hosket must match the Hosket integer.</p>
+    <p>The type <code>table</code> implements an associative array and can access the table through 3 types: numbers, strings, and properties (or call it methods). Tables can be inconsistent; that is, they can contain values of any type. But sadly, because Hosket in this version has not been integrated to create additional entries for the table, so it can only be done through the built-in module <code>table</code>.</p>
+    <p>Tables are the only data structure mechanism in Hosket; they can be used to represent array, list, symbol, set, record, chart, regular tree, etc. To display the records, Hosket uses the field name as an index. The language supports this representation by providing <code>a.name</code> as syntax for <code>a["name"]</code>. There are several convenient ways to create tables in Hosket.</p>
+    <p>Like indexes, the values of the fields in the table can be of any type. Especially, since functions are first-class values, fields in tables can contain functions. So the tables can also carry the methods.</p>
+    <p>The indexing of tables does not comply with the definition of raw equality in language. The expressions a[i] and a[j] represent the same table component when and only when i and j are equal (i.e. equal when there is no metaphor). But if float numbers have integrated values equal to their respective integers (e.g. <code>1,0 == 1</code>). But any float number that is used as a key, equal to an integer, will not be converted to that integer. For example, if you write <code>a[2.0] = 1</code>, the actual key only inserted into the table will be float <code>2.0</code> rather than integer <code>2</code>.</p>
+    <p>The built-in function <code>type</code> returns a string describing the type of a given value.</p>
+    <h3>1.2 - Operators</h3>
+    <p>Hosket programming languages have all kinds of operators such as add, subtract, multiply, divide or other mathematics. For other operators like assignment operators or comparison operators, however, because Hosket does not have keywords <code>and</code>, <code>or</code> or <code>not</code>, it is replaced with operators such as <code>&&</code>, <code>||</code>, <code>!</code>.</p>
+    <p>The mathematical operators that Hosket has are <code>+</code> (addition), <code>-</code> (subtraction), <code>*</code> (multiplication), <code>/</code> (division), <code>%</code> (modulus), <code>**</code> (exponent) and <code>//</code> (floor division).</p>
+    <p>The comparison operators that Hosket has are <code>==</code> (equal), <code></code>!=</code> (not equal), <code>></code> (greater than), <code>&lt;</code> (less than), <code>>=</code> (greater than or equal to), <code>&lt;=</code> (less than or equals), <code>&&</code> (and), <code>||</code> (or) and <code>!</code> (not).</p>
+    <p>The assignment operators that Hosket has are <code>=</code>, <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>, <code>%=</code>, <code>**=</code> and <code>//=</code>.</p>
+    <h3>1.3 - Error Handling</h3>
+    <p>Some operations in Hosket may cause errors. An error interrupts the normal process of the program, which can continue by detecting the error.</p>
+    <p>The Hosket code can clearly signal errors by calling the error function. (This function never returns.)</p>
+</main>
+
+
+
+<footer>
+    <p>Simply Docs was created by <a href="https://github.com/MarketingPipeline/">Marketing Pipeline</a> and is licensed
+        under the MIT license.</p>
+    <small>© 2014 Some company name</small>
+    <address>email@email.com</address>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/gh/MarketingPipeline/Markdown-Tag/markdown-tag.js"></script>
